@@ -12,16 +12,14 @@ git clone repo; pip install -r requirements.txt
 Train: python train.py --batch_size 2 --max_len 64Infer: python generate.py --question "What is AI?"
 Optimize
 
-Filter clean Q&A data; adjust max_len.
+## Filter clean Q&A data; adjust max_len.
 Use mixed precision, --gradient_accumulation_steps 8.
 Tune --top_k 50, --temperature 0.7.
 Set --batch_size 1 for 4GB GPUs; monitor with nvidia-smi.
 
-Results
+### Results
 
 Perplexity: Competitive on LMSYS-Chat-1M.
 Size: ~4MB post-training.
 Speed: ~0.5s/token on RTX 2050.
 
-Contribute via PRs! LinkedIn for collabs.
-Character count: 349
